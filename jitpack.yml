@@ -1,2 +1,2 @@
 jdk: openjdk8
-install: - cd Modules/RoxieMobile.NetworkingApi && ./gradlew publishToMavenLocal
+install: cd Modules/RoxieMobile.NetworkingApi && ./gradlew publishToMavenLocal
