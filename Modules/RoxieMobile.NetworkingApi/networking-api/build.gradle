@@ -1,5 +1,16 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
+}
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -49,6 +60,3 @@ dependencies {
     final JUNIT_VERSION = rootProject.ext.JUNIT_VERSION
     testImplementation "junit:junit:$JUNIT_VERSION"
 }
-
-// Deploy to Bintray
-apply from: 'tools/push.gradle'
