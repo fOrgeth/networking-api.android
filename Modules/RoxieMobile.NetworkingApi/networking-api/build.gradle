@@ -33,7 +33,7 @@ android {
 dependencies {
 
     // Kotlin
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$KOTLIN_VERSION"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$KOTLIN_VERSION"
 
     // Android Commons (Roxie Mobile)
     final ROXIE_ANDROID_COMMONS_VERSION = rootProject.ext.ROXIE_ANDROID_COMMONS_VERSION
